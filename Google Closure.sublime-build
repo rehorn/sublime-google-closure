@@ -1,0 +1,20 @@
+{
+   "cmd": [
+        "java",
+        "-jar", "${packages}/Google Closure/compiler/compiler.jar", 
+        "--js", "$file", 
+        "--js_output_file", "${file_path}/${file_base_name}.min.js", 
+        "--compilation_level", "WHITESPACE_ONLY"
+    ],
+   "windows": {
+        "cmd": [
+            "java",
+            "-jar", "${packages}/Google Closure/compiler/compiler.jar", 
+            "--js", "$file", 
+            "--js_output_file", "${file_path}/${file_base_name}.min.js", 
+            "--compilation_level", "WHITESPACE_ONLY"
+        ]
+    },
+   "file_regex": "^(.*):([0-9]+):() ERROR - (.*)",
+   "selector": "source.js"
+}
